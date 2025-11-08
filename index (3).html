@@ -1,0 +1,224 @@
+
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-M-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pagamento - Liberdade Definitiva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo customizado para o input radio (plano) */
+        input[type="radio"]:checked + label {
+            border-color: #3B82F6; /* blue-500 */
+            box-shadow: 0 0 0 2px #3B82F6; /* ring-2 */
+        }
+        /* Estilo customizado para o input radio (pagamento) */
+        input[type="radio"].payment-method:checked + label {
+            border-color: #3B82F6; /* blue-500 */
+            background-color: #1E3A8A; /* blue-800 */
+            color: #FFFFFF; /* white */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 py-12 md:py-20 px-4">
+
+    <div class="container mx-auto max-w-6xl">
+        
+        <!-- Grid Principal -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+
+            <!-- Coluna Esquerda: Detalhes do Pedido e Planos -->
+            <div class="lg:pr-8">
+                <h1 class="text-3xl md:text-4xl font-black text-white mb-4">Complete Sua Inscrição</h1>
+                <p class="text-lg text-gray-300 mb-8">Você está a um passo de garantir sua vaga na Mentoria VIP Liberdade Definitiva.</p>
+
+                <!-- Box de Benefícios -->
+                <div class="bg-gray-800 rounded-2xl p-6 border border-gray-700 mb-8">
+                    <h3 class="text-2xl font-bold text-white mb-5">O que você está garantindo hoje:</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="font-semibold text-white">1 Mentoria VIP 1-a-1 por semana (1-2h, no seu horário)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Plano de Ação de 90 Dias 100% Personalizado</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Canal de Acesso Direto 1-a-1 (WhatsApp/Telegram)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Check-ins de Accountability e Protocolo de Retomada</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="font-semibold text-white">BÔNUS: E-book "100 Dias para se Tornar a Melhor Versão"</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Seleção de Plano -->
+                <h3 class="text-2xl font-bold text-white mb-5">1. Selecione seu Plano</h3>
+                <div class="space-y-4">
+                    <!-- Plano 1: Semanal -->
+                    <input type="radio" id="plano-semanal" name="plano" value="semanal" class="hidden">
+                    <label for="plano-semanal" class="flex justify-between items-center p-5 bg-gray-800 rounded-lg border-2 border-gray-700 cursor-pointer transition-all">
+                        <div>
+                            <span class="text-xl font-bold text-white">Plano Semanal</span>
+                            <p class="text-gray-400">Plano flexível, cobre 7 dias de acesso</p>
+                        </div>
+                        <div class="text-2xl font-black text-white">R$ 27</div>
+                    </label>
+
+                    <!-- Plano 2: Mensal -->
+                    <input type="radio" id="plano-mensal" name="plano" value="mensal" class="hidden" checked>
+                    <label for="plano-mensal" class="flex justify-between items-center p-5 bg-gray-800 rounded-lg border-2 border-gray-700 cursor-pointer transition-all">
+                        <div>
+                            <span class="text-xl font-bold text-white">Plano Mensal</span>
+                            <p class="text-gray-400">Oferta principal, cobre 30 dias de acesso</p>
+                        </div>
+                        <div class="text-2xl font-black text-white">R$ 97</div>
+                    </label>
+
+                    <!-- Plano 3: Único (Trimestral) -->
+                    <input type="radio" id="plano-unico" name="plano" value="unico" class="hidden">
+                    <label for="plano-unico" class="relative flex justify-between items-center p-5 bg-gray-800 rounded-lg border-2 border-gray-700 cursor-pointer transition-all">
+                        <span class="absolute -top-3 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Recomendado</span>
+                        <div>
+                            <span class="text-xl font-bold text-white">Pagamento Único</span>
+                            <p class="text-gray-400">Melhor valor (Equiv. 3 meses, economize R$ 21)</p>
+                        </div>
+                        <div class="text-2xl font-black text-white">R$ 270</div>
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- Coluna Direita: Pagamento -->
+            <div class="bg-gray-800 rounded-2xl p-6 md:p-10 shadow-xl border border-gray-700">
+                <h2 class="text-2xl font-bold text-white mb-6">2. Informações de Pagamento</h2>
+                
+                <form id="payment-form">
+                    <!-- Dados Pessoais -->
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg text-white" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Seu melhor E-mail</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg text-white" required>
+                        </div>
+                        <div>
+                            <label for="whatsapp" class="block text-sm font-medium text-gray-300 mb-1">WhatsApp (para o canal 1-a-1)</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(XX) XXXXX-XXXX" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg text-white" required>
+                        </div>
+                    </div>
+
+                    <!-- Método de Pagamento -->
+                    <h3 class="text-lg font-semibold text-white mb-3">3. Método de Pagamento</h3>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <input type="radio" id="method-pix" name="paymentMethod" value="pix" class="hidden payment-method" checked>
+                        <label for="method-pix" class="block p-4 bg-gray-900 border-2 border-gray-700 rounded-lg text-center font-bold cursor-pointer transition-all">PIX</label>
+
+                        <input type="radio" id="method-cartao" name="paymentMethod" value="cartao" class="hidden payment-method">
+                        <label for="method-cartao" class="block p-4 bg-gray-900 border-2 border-gray-700 rounded-lg text-center font-bold cursor-pointer transition-all">Cartão (Link)</label>
+                    </div>
+
+                    <!-- Instruções de Pagamento -->
+                    
+                    <!-- Info PIX (Default) -->
+                    <div id="pix-info" class="bg-gray-900 p-4 rounded-lg border border-gray-700 space-y-3">
+                        <p class="font-medium text-center">Para pagar com PIX (Copia e Cola):</p>
+                        <ol class="list-decimal list-inside text-sm text-gray-300 space-y-2">
+                            <li>Copie a chave PIX abaixo.</li>
+                            <li>Abra o app do seu banco e faça o pagamento.</li>
+                            <li>Envie o comprovante para o WhatsApp <strong class="text-white">(99) 99233-3108</strong> para liberação imediata.</li>
+                        </ol>
+                        <div class="bg-gray-800 border border-gray-700 p-3 rounded-lg flex items-center justify-between">
+                            <span id="pix-key" class="text-sm md:text-base text-yellow-400 font-mono break-all">04400048373</span>
+                            <button type="button" id="copy-button" class="ml-2 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-bold hover:bg-blue-700">Copiar</button>
+                        </div>
+                        <p id="copy-feedback" class="text-sm text-green-400 text-center hidden">Chave copiada!</p>
+                    </div>
+
+                    <!-- Info Cartão (Hidden) -->
+                    <div id="cartao-info" class="bg-gray-900 p-4 rounded-lg border border-gray-700 text-center hidden">
+                        <p class="text-gray-300">Após clicar no botão abaixo, você receberá o link de pagamento seguro (Mercado Pago / Stripe) no WhatsApp e E-mail informados.</p>
+                    </div>
+
+                    <!-- Botão Final -->
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold text-lg py-4 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 mt-8 flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        FINALIZAR E GARANTIR MINHA VAGA
+                    </button>
+
+                    <p class="text-xs text-gray-500 text-center mt-4">Garantia de Retomada Inabalável. Seus dados estão 100% seguros.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const paymentMethods = document.querySelectorAll('input[name="paymentMethod"]');
+            const pixInfo = document.getElementById('pix-info');
+            const cartaoInfo = document.getElementById('cartao-info');
+
+            // Alternar visibilidade das instruções de pagamento
+            paymentMethods.forEach(method => {
+                method.addEventListener('change', (e) => {
+                    if (e.target.value === 'pix') {
+                        pixInfo.classList.remove('hidden');
+                        cartaoInfo.classList.add('hidden');
+                    } else {
+                        pixInfo.classList.add('hidden');
+                        cartaoInfo.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // Função de copiar PIX
+            const copyButton = document.getElementById('copy-button');
+            const pixKey = document.getElementById('pix-key').textContent;
+            const copyFeedback = document.getElementById('copy-feedback');
+
+            copyButton.addEventListener('click', () => {
+                // Usando execCommand por compatibilidade em iframes
+                const tempTextArea = document.createElement('textarea');
+                tempTextArea.value = pixKey;
+                document.body.appendChild(tempTextArea);
+                tempTextArea.select();
+                try {
+                    document.execCommand('copy');
+                    copyFeedback.classList.remove('hidden');
+                    setTimeout(() => {
+                        copyFeedback.classList.add('hidden');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Falha ao copiar texto: ', err);
+                }
+                document.body.removeChild(tempTextArea);
+            });
+
+            // Lógica do Formulário (exemplo)
+            const form = document.getElementById('payment-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Aqui você adicionaria a lógica de envio do formulário
+                // Por exemplo, redirecionar para uma página de obrigado ou enviar dados para um backend
+                alert('Inscrição enviada! (Isso é um placeholder)');
+            });
+        });
+    </script>
+
+</body>
+</html>
